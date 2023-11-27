@@ -18,12 +18,20 @@ use Illuminate\Support\Facades\Route;
 //    return $request->user();
 //});
 
+use App\Http\Controllers\AgentController;
+Route::get('/', [AgentController::class, 'index']);
+Route::get('/{agent}', [AgentController::class, 'show']);
+Route::post('/', [AgentController::class, 'save']);
+Route::put('/{agent}', [AgentController::class, 'update']);
+Route::delete('/{agent}', [AgentController::class, 'delete']);
 
+/*
 Route::get('agents', 'AgentController@index');
 Route::get('agents/{agent}', 'AgentController@show');
 Route::post('agents', 'AgentController@save');
 Route::put('agents/{agent}', 'AgentController@update');
 Route::delete('agents/{agent}', 'AgentController@delete');
+*/
 
 Route::get('astamis', 'AstAmiController@index');
 
