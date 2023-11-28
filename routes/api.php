@@ -104,7 +104,7 @@ Route::delete('coscloses/{cosclose}', 'CosCloseController@delete');
 
 use App\Http\Controllers\CosOpenController;
 Route::get('cosopens', [CosOpenController::class, 'index']);
-Route::get('cosopens/{cosopen}', [CosOpenController::class, 'show');
+Route::get('cosopens/{cosopen}', [CosOpenController::class, 'show']);
 Route::post('cosopens', [CosOPenController::class, 'save']);
 Route::put('cosopens/{cosopen}', [CosOpenController::class, 'update']);
 Route::delete('cosopens/{cosopen}', [CosOpenController::class, 'delete']);
