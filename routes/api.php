@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 //});
 
 use App\Http\Controllers\AgentController;
-Route::get('/', [AgentController::class, 'index']);
-Route::get('/{agent}', [AgentController::class, 'show']);
-Route::post('/', [AgentController::class, 'save']);
-Route::put('/{agent}', [AgentController::class, 'update']);
-Route::delete('/{agent}', [AgentController::class, 'delete']);
+Route::get('agents', [AgentController::class, 'index']);
+Route::get('agents/{agent}', [AgentController::class, 'show']);
+Route::post('agents', [AgentController::class, 'save']);
+Route::put('agents/{agent}', [AgentController::class, 'update']);
+Route::delete('agents/{agent}', [AgentController::class, 'delete']);
 
 /*
 Route::get('agents', 'AgentController@index');
