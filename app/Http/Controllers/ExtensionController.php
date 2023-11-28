@@ -365,7 +365,7 @@ class ExtensionController extends Controller
 
 		$findmac = $matches[1] . ":" . trim($matches[2]) . ':' . trim($matches[3]);
 
-		$vendorline = `grep -i $findmac /home/vagrant/sites/srkapi/storage/app/manuf.txt`;
+		$vendorline = `grep -i $findmac /opt/sark/www/sark-common/manuf.txt`;
 
 		$delim="\t";
 		$short_vendor_cols = explode($delim,$vendorline,3);
