@@ -343,11 +343,11 @@ Route::delete('routes/{route}', 'RouteController@delete');
 
 use App\Http\Controllers\SysCommandController;
 Route::get('syscommands', [SysCommandController::class, 'index']);
-Route::get('syscommands/{commit}', [SysCommandController::class, 'commit']);
-Route::get('syscommands/{reboot}', [SysCommandController::class, 'reboot']);
-Route::get('syscommands/{pbxrunstate}', [SysCommandController::class, 'pbxrunstate']);
-Route::get('syscommands/{start}', [SysCommandController::class, 'start']);
-Route::get('syscommands/{stop}', [SysCommandController::class, 'stop']);
+Route::get('syscommands/commit', [SysCommandController::class, 'commit']);
+Route::get('syscommands/reboot', [SysCommandController::class, 'reboot']);
+Route::get('syscommands/pbxrunstate', [SysCommandController::class, 'pbxrunstate']);
+Route::get('syscommands/start', [SysCommandController::class, 'start']);
+Route::get('syscommands/stop', [SysCommandController::class, 'stop']);
 
 /*
 Route::get('syscommands', 'SysCommandController@index');
