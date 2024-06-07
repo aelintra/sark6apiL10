@@ -178,6 +178,7 @@ Route::post('extensions/mailbox', [ExtensionController::class, 'mailbox']);
 Route::post('extensions/provisioned', [ExtensionController::class, 'provisioned']);
 Route::post('extensions/vxt', [ExtensionController::class, 'vxt']);
 Route::post('extensions/unprovisioned', [ExtensionController::class, 'unprovisioned']);
+Route::post('extensions/webrtc', [ExtensionController::class, 'webrtc']);
 Route::put('extensions/{extension}', [ExtensionController::class, 'update']);
 Route::put('extensions/{extension}/runtime', [ExtensionController::class, 'updateruntime']);
 Route::delete('extensions/{extension}', [ExtensionController::class, 'delete']);
