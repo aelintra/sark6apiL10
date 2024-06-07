@@ -7,6 +7,3 @@ www-data ALL=NOPASSWD: /bin/rm -rf /etc/asterisk/*
 www-data ALL=NOPASSWD: /bin/rm -rf /var/lib/ldap/*
 www-data ALL=NOPASSWD: /bin/systemctl stop asterisk
 www-data ALL=NOPASSWD: /bin/systemctl start asterisk
-
-
-
