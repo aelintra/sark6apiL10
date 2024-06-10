@@ -23,7 +23,6 @@ class Extension extends Model
     	'cluster' => 'default',
     	'protocol' => 'IPV4',
     	'provisionwith' => 'IP',
-
     	'sipiaxfriend' => 
     	"type=peer
 defaultuser=\$desc
@@ -59,6 +58,7 @@ encryption=\$encryption",
     		'dialstring',
     		'firstseen',
     		'lastseen',
+			'passwd',
     		'z_created',
     		'z_updated',
     		'newformat',
@@ -77,8 +77,17 @@ encryption=\$encryption",
     		'externalip',
     		'newformat',
     		'openfirewall',
+			'sipiaxfriend',
     		'tls',
     		'twin'
     ];
+
+	public function __construct(array $attributes = array())
+	{
+    parent::__construct($attributes);
+
+    $this->attributes['passwd'] = ret_password(12);
+
+	}
 
 }
